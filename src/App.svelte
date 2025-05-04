@@ -52,7 +52,7 @@
           size: '3.3 MB',
           coverImage: '/covers/memulai-bisnis-v2.png',
           description: 'Panduan Nyata untuk Pemula yang Belum Pernah Berbisnis',
-          downloadUrl: '/ebooks/memulai-bisnis-v2.pdf'
+          downloadUrl: '/ebooks/memulai-bisnis-v3.pdf'
         },
         {
           id: 5,
