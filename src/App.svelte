@@ -44,6 +44,15 @@
           coverImage: '/covers/great-leadership.png',
           description: 'Membangun Kepemimpinan Tangguh di Era Perubahan',
           downloadUrl: '/ebooks/great-leadership.pdf'
+        },
+        {
+          id: 4,
+          title: 'MEMULAI BISNIS',
+          filename: 'memulai-bisnis.pdf',
+          size: '3.3 MB',
+          coverImage: '/covers/memulai-bisnis.png',
+          description: 'Panduan Nyata untuk Pemula yang Belum Pernah Berbisnis',
+          downloadUrl: '/ebooks/memulai-bisnis.pdf'
         }
       ];
       
@@ -80,7 +89,7 @@
         </svg>
       </div>
       <h1 class="text-4xl md:text-6xl font-serif font-bold text-[#5D4037] mb-4">
-        tapsite.ai
+        book.tapsite.ai
       </h1>
       <p class="text-[#8D6E63] text-xl max-w-2xl mx-auto font-serif">
         Your personal library of premium ebooks
@@ -115,7 +124,7 @@
       </div>
     <!-- Ebooks Grid with book-like styling -->
     {:else if filteredEbooks.length > 0}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
         {#each filteredEbooks as ebook (ebook.id)}
           <div 
             class="flex flex-col bg-[#FFF8E1] rounded-lg overflow-hidden shadow-lg border border-[#D7CCC8] transition-all duration-300 hover:shadow-xl"
@@ -123,7 +132,7 @@
             on:mouseleave={() => hoveredCard = null}
           >
             <!-- Book Cover with 3D effect -->
-            <div class="relative mx-auto pt-6 pb-2 px-4">
+            <div class="relative mx-auto pt-4 pb-2 px-2 md:pt-6 md:pb-2 md:px-4">
               <div class="book-cover-container">
                 <img 
                   src={ebook.coverImage} 
@@ -136,21 +145,21 @@
             </div>
             
             <!-- Book Info -->
-            <div class="p-4 flex-grow flex flex-col">
-              <h3 class="font-serif font-medium text-[#5D4037] text-lg text-center mb-2">{ebook.title}</h3>
-              <p class="text-sm text-[#8D6E63] line-clamp-2 font-serif text-center mb-4">{ebook.description}</p>
+            <div class="p-2 md:p-4 flex-grow flex flex-col">
+              <h3 class="font-serif font-medium text-[#5D4037] text-sm md:text-lg text-center mb-1 md:mb-2">{ebook.title}</h3>
+              <p class="text-xs md:text-sm text-[#8D6E63] line-clamp-2 font-serif text-center mb-2 md:mb-4">{ebook.description}</p>
               
               <div class="mt-auto">
-                <div class="text-xs text-[#8D6E63] font-serif text-center mb-3">
+                <div class="text-xs text-[#8D6E63] font-serif text-center mb-2 md:mb-3">
                   {ebook.size}
                 </div>
                 
                 <a 
                   href={ebook.downloadUrl} 
                   download
-                  class="block w-full bg-[#8D6E63] hover:bg-[#5D4037] text-[#FFF8E1] py-2 rounded-lg transition-colors flex items-center justify-center gap-1 shadow-md font-serif"
+                  class="block w-full bg-[#8D6E63] hover:bg-[#5D4037] text-[#FFF8E1] py-1.5 md:py-2 rounded-lg transition-colors flex items-center justify-center gap-1 shadow-md font-serif text-xs md:text-sm"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                   </svg>
                   Download
@@ -197,13 +206,20 @@
   }
   
   .book-cover {
-    width: 180px;
-    height: 260px;
+    width: 140px;
+    height: 200px;
     object-fit: cover;
     border-radius: 2px;
     position: relative;
     transform-origin: 0% 50%;
     transition: transform 0.5s ease;
+  }
+  
+  @media (min-width: 768px) {
+    .book-cover {
+      width: 180px;
+      height: 260px;
+    }
   }
   
   .book-spine {
