@@ -48,11 +48,11 @@
         {
           id: 4,
           title: 'MEMULAI BISNIS',
-          filename: 'memulai-bisnis.pdf',
+          filename: 'memulai-bisnis-v2.pdf',
           size: '3.3 MB',
           coverImage: '/covers/memulai-bisnis.png',
           description: 'Panduan Nyata untuk Pemula yang Belum Pernah Berbisnis',
-          downloadUrl: '/ebooks/memulai-bisnis.pdf'
+          downloadUrl: '/ebooks/memulai-bisnis-v2.pdf'
         },
         {
           id: 5,
