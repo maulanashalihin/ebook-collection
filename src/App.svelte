@@ -53,6 +53,15 @@
           coverImage: '/covers/memulai-bisnis.png',
           description: 'Panduan Nyata untuk Pemula yang Belum Pernah Berbisnis',
           downloadUrl: '/ebooks/memulai-bisnis.pdf'
+        },
+        {
+          id: 5,
+          title: ' Satu Link, Seumur Hidup',
+          filename: 'satu-link.pdf',
+          size: '2.4 MB',
+          coverImage: '/covers/satu-link.png',
+          description: 'Cara Cerdas Membangun Income Otomatis Lewat Program Affiliate Tapsite.ai',
+          downloadUrl: '/ebooks/satu-link.pdf'
         }
       ];
       
