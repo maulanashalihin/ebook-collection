@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+    import OtpWidget from './lib/OtpWidget.svelte';
 
   // State for ebooks
   let ebooks = [];
@@ -191,6 +192,7 @@
     {/if}
   </div>
 </main>
+<OtpWidget vp_url="https://ismail.dripsender.id:10001/api/integration/2490f5c2-9556-4ad1-a6fc-2d95913b94eb" votp_url="https://ismail.dripsender.id:10001/api/integration/dc3d0b8b-b75b-4c16-887e-d1f9ea627917" />
 
 <style>
   /* Additional custom styles */
